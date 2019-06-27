@@ -1,0 +1,10 @@
+[Unit]
+Description=Connect to VPN
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/systemd/system/vpn.env
+ExecStart=/bin/bash -c 'echo ${VPN_PASS} | sudo openconnect ${VPN_URL} -u ${VPN_USER} --passwd-on-stdin'
+
+[Install]
+WantedBy=multi-user.target

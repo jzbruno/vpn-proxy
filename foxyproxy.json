@@ -1,0 +1,27 @@
+{
+  "mode": "patterns",
+  "proxySettings": [
+    {
+      "title": "vpn-http",
+      "type": 1,
+      "color": "#66cc66",
+      "address": "vpn.local",
+      "port": 8888,
+      "active": true,
+      "whitePatterns": [
+        {
+          "title": "example.com",
+          "active": true,
+          "pattern": "*.example.com",
+          "type": 1,
+          "protocols": 1
+        }
+      ],
+      "blackPatterns": []
+    }
+  ],
+  "logging": {
+    "active": true,
+    "maxSize": 500
+  }
+}
